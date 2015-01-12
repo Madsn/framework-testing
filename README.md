@@ -40,19 +40,30 @@ There are many other features that would be useful, but in order to avoid having
 
 ### Features:
 
-- Authentication (Login at least, signup not a requirement)
 - Setup of team (CRUD member)
 - Ability to cycle through team members with long-term persistence (for our daily Battleships game vs the other team). It should be possible to postpone the "turn" of the team member in case that person is not available
 - Ability to draw a name at random from the team without influencing the regular cycle
 
+### Implementation order
+
+To the extent that it makes sense, I will attempt to implement the functionality in the following order.
+
+1. Setup basic persistence (Sqlite or similar preferably, if not then MySQL or Postgres)
+2. Create member via form
+3. List members
+4. Edit/Delete members
+5. Random button
+6. Cycle button
+7. Postpone when cycling
+
 ## The competition
 
 - [ ] [Vaadin](https://vaadin.com/home)
-- [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Jhipster (Spring + Angular)](https://jhipster.github.io/)
 - [ ] [Grails](https://grails.org/)
 - [ ] [Play!2 (Java)](https://www.playframework.com/)
 - [ ] [Play!2 (Scala)](https://www.playframework.com/)
+- [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
 - [ ] [Jersey + ??](https://jersey.java.net/)
 
@@ -77,21 +88,25 @@ Comment on the following for each framework.
 - Install Eclipse
 - Install Eclipse plugins: Vaadin + Tomcat
 - Install Eclipse E4 RCP patch
+- [Configure Eclipse to open *.scss files properly](http://stackoverflow.com/questions/7614612/is-there-an-eclipse-editor-for-sasss-scss-files-or-syntax-coloring-plugin)
+- Install Eclipse IvyDE plugin (for resolving dependencies added to ivy.xml)
 
+No major roadblocks so far.
 
-#### Documentation
+#### Development
 
-#### Learning resources
+##### Step 1: Basic persistence
 
-#### Tooling
+For persistence I was following the steps described in the [Vaadin book](https://vaadin.com/book/-/page/jpacontainer.installation.html)
 
-#### Productivity
+Installed JPAContainer extension by adding a line to ivy.xml.
+Eclipse automatically downloaded the extension as soon as I saved the file :).
 
-#### Templating/Styling
+Installed eclipselink and H2 via Ivy.
 
-#### Performance
+Configured persistence.xml.
 
-### ZK
+##### Step 2: Create member
 
 ### Jhipster (Spring + Angular)
 
@@ -102,6 +117,8 @@ Comment on the following for each framework.
 #### Java
 
 #### Scala
+
+### ZK
 
 ### Dropwizard
 
