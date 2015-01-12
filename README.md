@@ -5,22 +5,19 @@
 - [Battle of the JVM frameworks](#battle-of-the-jvm-frameworks)
   - [The application](#the-application)
     - [Features:](#features)
+    - [Implementation order](#implementation-order)
   - [The competition](#the-competition)
   - [Journal](#journal)
     - [Vaadin](#vaadin)
       - [Installation](#installation)
-      - [Documentation](#documentation)
-      - [Learning resources](#learning-resources)
-      - [Tooling](#tooling)
-      - [Productivity](#productivity)
-      - [Templating/Styling](#templatingstyling)
-      - [Performance](#performance)
-    - [ZK](#zk)
+      - [Development](#development)
+      - [Thoughts](#thoughts)
     - [Jhipster (Spring + Angular)](#jhipster-spring--angular)
     - [Grails](#grails)
     - [Play! 2.0](#play!-20)
       - [Java](#java)
       - [Scala](#scala)
+    - [ZK](#zk)
     - [Dropwizard](#dropwizard)
     - [Jersey + ??](#jersey--)
 
@@ -95,19 +92,9 @@ No major roadblocks so far.
 
 #### Development
 
-##### Step 1: Basic persistence
-
-For persistence I was following the steps described in the [Vaadin book](https://vaadin.com/book/-/page/jpacontainer.installation.html)
-
-Installed JPAContainer extension by adding a line to ivy.xml.
-Eclipse automatically downloaded the extension as soon as I saved the file :).
-Installed eclipselink and H2 via Ivy.
-Configured persistence.xml.
-
 *ISSUE*: When code is reloaded without restarting tomcat, I get a database exception because H2 is not running in TCP mode and can only accept one connect, which is not properly closed when code is reloaded.
 *Workaround*: Reconfigured to use sqlite.
 
-##### Step 2: Create member
 
 #### Thoughts
 

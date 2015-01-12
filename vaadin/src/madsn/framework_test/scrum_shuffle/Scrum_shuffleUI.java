@@ -5,6 +5,8 @@ import javax.servlet.annotation.WebServlet;
 import madsn.framework_test.scrum_shuffle.models.Member;
 import madsn.framework_test.scrum_shuffle.models.MemberForm;
 
+import com.vaadin.addon.jpacontainer.JPAContainer;
+import com.vaadin.addon.jpacontainer.JPAContainerFactory;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.data.util.BeanItemContainer;
@@ -27,11 +29,12 @@ public class Scrum_shuffleUI extends UI {
 	protected void init(VaadinRequest request) {
 		VerticalLayout vlayout = new VerticalLayout();
 		setContent(vlayout);
-		
-		BeanItemContainer<Member> members = new BeanItemContainer<Member>(Member.class);
-		
-		MemberForm form = new MemberForm(members);
+
+		JPAContainer<Member> memberContainer = JPAContainerFactory.make(
+				Member.class, "member");
+
+		MemberForm form = new MemberForm(memberContainer);
 		vlayout.addComponent(form);
-		
+
 	}
 }

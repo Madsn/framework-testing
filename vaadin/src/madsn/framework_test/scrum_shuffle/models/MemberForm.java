@@ -23,15 +23,17 @@ public class MemberForm extends CustomComponent implements ClickListener {
 	private Button discardBtn;
 	private BeanFieldGroup<Member> fieldGroup;
 
-	private BeanItemContainer<Member> members;
+	private JPAContainer<Member> members;
 
-	public MemberForm(BeanItemContainer<Member> members) {
-		this.members = members;
+	public MemberForm(JPAContainer<Member> memberContainer) {
+		this.members = memberContainer;
 		FormLayout layout = new FormLayout();
-		name = new TextField();
+		name = new TextField("Name");
 		name.setRequired(true);
-		initials = new TextField();
+		name.setNullRepresentation("");
+		initials = new TextField("Initials");
 		initials.setRequired(true);
+		initials.setNullRepresentation("");
 
 		layout.addComponent(name);
 		layout.addComponent(initials);
@@ -60,7 +62,7 @@ public class MemberForm extends CustomComponent implements ClickListener {
 		if (event.getSource() == okBtn) {
 			try {
 				fieldGroup.commit();
-				members.addBean(fieldGroup.getItemDataSource().getBean());
+				members.addEntity(fieldGroup.getItemDataSource().getBean());
 				fieldGroup.setItemDataSource(new Member());
 			} catch (CommitException e) {
 				Notification.show("validation failed", "Error",

@@ -25,7 +25,7 @@ public class Member implements Serializable {
 	
 	public Member(String name, String initials){
 		this.name = name;
-		this.initials = initials;
+		this.initials = initials.toUpperCase();
 	}
 	
 	public Member(){
@@ -48,6 +48,6 @@ public class Member implements Serializable {
 		return initials;
 	}
 	public void setInitials(String initials) {
-		this.initials = initials;
+		this.initials = initials.toUpperCase();
 	}
 }
