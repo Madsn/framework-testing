@@ -101,12 +101,20 @@ For persistence I was following the steps described in the [Vaadin book](https:/
 
 Installed JPAContainer extension by adding a line to ivy.xml.
 Eclipse automatically downloaded the extension as soon as I saved the file :).
-
 Installed eclipselink and H2 via Ivy.
-
 Configured persistence.xml.
 
+*ISSUE*: When code is reloaded without restarting tomcat, I get a database exception because H2 is not running in TCP mode and can only accept one connect, which is not properly closed when code is reloaded.
+
 ##### Step 2: Create member
+
+#### Thoughts
+
+- Documentation: 
+  - The _Vaadin Book_:
+    - Has lots of code examples, but seems to gloss over topics common to JVM web development in general. 
+    - Shows a bunch of different ways to do something, but assumes the reader is experienced enough to know when each technique is relevant without much explanation.
+    - Code examples use deprecated classes... (e.g. Form instead of FieldGroup)
 
 ### Jhipster (Spring + Angular)
 
