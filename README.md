@@ -8,8 +8,15 @@
   - [The competition](#the-competition)
   - [Journal](#journal)
     - [Vaadin](#vaadin)
+      - [Installation](#installation)
+      - [Documentation](#documentation)
+      - [Learning resources](#learning-resources)
+      - [Tooling](#tooling)
+      - [Productivity](#productivity)
+      - [Templating/Styling](#templatingstyling)
+      - [Performance](#performance)
     - [ZK](#zk)
-    - [Spring + Angular](#spring--angular)
+    - [Jhipster (Spring + Angular)](#jhipster-spring--angular)
     - [Grails](#grails)
     - [Play! 2.0](#play!-20)
       - [Java](#java)
@@ -29,18 +36,20 @@ My primary requirement for now is that it should run on the JVM, but I may decid
 
 For use in Scrum on my team for various occasions when it is necessary to cycle through team members, or choose a single member at random.
 
+There are many other features that would be useful, but in order to avoid having to do a ton of duplicate work the baseline for doing comparisons is very minimal.
+
 ### Features:
 
-- Authentication.
-- Setup of team (CRUD members).
-- Ability to cycle through team members (for our daily Battleships game vs the other team). It should be possible to postpone the "turn" of the team member in case that person is not available.
-- Ability to draw a name at random from the team.
+- Authentication (Login at least, signup not a requirement)
+- Setup of team (CRUD member)
+- Ability to cycle through team members with long-term persistence (for our daily Battleships game vs the other team). It should be possible to postpone the "turn" of the team member in case that person is not available
+- Ability to draw a name at random from the team without influencing the regular cycle
 
 ## The competition
 
 - [ ] [Vaadin](https://vaadin.com/home)
 - [ ] [ZK](http://www.zkoss.org/)
-- [ ] [Spring + Angular](https://jhipster.github.io/)
+- [ ] [Jhipster (Spring + Angular)](https://jhipster.github.io/)
 - [ ] [Grails](https://grails.org/)
 - [ ] [Play!2 (Java)](https://www.playframework.com/)
 - [ ] [Play!2 (Scala)](https://www.playframework.com/)
@@ -62,9 +71,29 @@ Comment on the following for each framework.
 
 ### Vaadin
 
+#### Installation
+
+- Install Tomcat (extract zip, run startup.bat)
+- Install Eclipse
+- Install Eclipse plugins: Vaadin + Tomcat
+- Install Eclipse E4 RCP patch
+
+
+#### Documentation
+
+#### Learning resources
+
+#### Tooling
+
+#### Productivity
+
+#### Templating/Styling
+
+#### Performance
+
 ### ZK
 
-### Spring + Angular
+### Jhipster (Spring + Angular)
 
 ### Grails
 

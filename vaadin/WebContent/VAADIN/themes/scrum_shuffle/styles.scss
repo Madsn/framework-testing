@@ -1,0 +1,9 @@
+@import "addons.scss";
+@import "scrum_shuffle.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in scrum_shuffle.scss */
+.scrum_shuffle {
+  @include addons;
+  @include scrum_shuffle;
+}
