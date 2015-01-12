@@ -48,7 +48,7 @@
 		
 		<dependency org="org.eclipse.persistence" name="eclipselink" rev="2.5.2" />
 		
-		<dependency org="com.h2database" name="h2" rev="1.4.184" />
+		<dependency org="org.xerial" name="sqlite-jdbc" rev="3.8.7"/>
 		
 	</dependencies>
 </ivy-module>
