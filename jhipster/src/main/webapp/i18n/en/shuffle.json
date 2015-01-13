@@ -5,6 +5,9 @@
         "submit": "Submit",
         "addmember": "Add new member",
         "memberslist": "Current members",
-        "cyclebtn": "Cycle"
+        "cyclebtn": "Cycle",
+        "cycle": "Cycle",
+        "random": "Random",
+        "go": "Go"
     }
 }

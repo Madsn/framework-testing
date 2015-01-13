@@ -9,6 +9,7 @@
                 "teamMember": "TeamMember",
                 "additionalEntity": "JHipster will add addtional entities"
             },
+            "shuffle": "Shuffle",
             "account": {
                 "main": "Account",
                 "settings": "Settings",

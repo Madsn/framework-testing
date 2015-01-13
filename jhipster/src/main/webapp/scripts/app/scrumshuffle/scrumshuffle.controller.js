@@ -15,4 +15,8 @@ angular.module('scrumshuffleApp')
                 $scope.nextMember = result;
             });
         };
+
+        $scope.random = function() {
+            $scope.nextRandomMember = $scope.teamMembers[Math.floor(Math.random() * $scope.teamMembers.length)];
+        };
     });
