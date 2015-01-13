@@ -106,7 +106,9 @@ I'm sure I would be having less issues if I took the time to read through the en
 
 ### Jhipster (Spring + Angular)
 
-
+- Installation: 
+  - Setup was very easy with yeoman - with one minor exception: the installation guide forgets to mention that ruby is required for SASS.
+  - The sample app is pretty nice, with authentication, i18n, swagger API + some other stuff
 
 ### Grails
 
