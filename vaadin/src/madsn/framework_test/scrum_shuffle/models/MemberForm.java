@@ -10,8 +10,11 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
+import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
 
 public class MemberForm extends CustomComponent implements ClickListener {
 
@@ -27,7 +30,15 @@ public class MemberForm extends CustomComponent implements ClickListener {
 
 	public MemberForm(JPAContainer<Member> memberContainer) {
 		this.members = memberContainer;
+		
+		VerticalLayout wrapper = new VerticalLayout();
+		Panel panel = new Panel();
 		FormLayout layout = new FormLayout();
+		
+		Label formHeader = new Label("Add new Member");
+		formHeader.setStyleName("h1");
+		wrapper.addComponent(formHeader);
+		
 		name = new TextField("Name");
 		name.setRequired(true);
 		name.setNullRepresentation("");
@@ -35,6 +46,7 @@ public class MemberForm extends CustomComponent implements ClickListener {
 		initials.setRequired(true);
 		initials.setNullRepresentation("");
 
+		
 		layout.addComponent(name);
 		layout.addComponent(initials);
 
@@ -54,7 +66,10 @@ public class MemberForm extends CustomComponent implements ClickListener {
 		fieldGroup.setItemDataSource(new Member());
 		fieldGroup.bindMemberFields(this);
 
-		setCompositionRoot(layout);
+		layout.setMargin(true);
+		panel.setContent(layout);
+		wrapper.addComponent(panel);
+		setCompositionRoot(wrapper);
 	}
 
 	@Override

@@ -50,4 +50,8 @@ public class Member implements Serializable {
 	public void setInitials(String initials) {
 		this.initials = initials.toUpperCase();
 	}
+	
+	public String toString(){
+		return this.initials + " " + this.name;
+	}
 }
