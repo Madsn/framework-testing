@@ -10,7 +10,6 @@
   - [Journal](#journal)
     - [Vaadin](#vaadin)
       - [Installation](#installation)
-      - [Development](#development)
       - [Thoughts](#thoughts)
     - [Jhipster (Spring + Angular)](#jhipster-spring--angular)
     - [Grails](#grails)
@@ -56,6 +55,7 @@ To the extent that it makes sense, I will attempt to implement the functionality
 ## The competition
 
 - [ ] [Vaadin](https://vaadin.com/home)
+  - Progress: Finished first 3 steps, i.e. create new member + list existing members
 - [ ] [Jhipster (Spring + Angular)](https://jhipster.github.io/)
 - [ ] [Grails](https://grails.org/)
 - [ ] [Play!2 (Java)](https://www.playframework.com/)
@@ -90,12 +90,6 @@ Comment on the following for each framework.
 
 No major roadblocks so far.
 
-#### Development
-
-*ISSUE*: When code is reloaded without restarting tomcat, I get a database exception because H2 is not running in TCP mode and can only accept one connect, which is not properly closed when code is reloaded.
-*Workaround*: Reconfigured to use sqlite.
-
-
 #### Thoughts
 
 - Documentation: 
@@ -105,10 +99,14 @@ No major roadblocks so far.
     - Code examples use deprecated classes... (e.g. Form instead of FieldGroup)
   - Hard to find code examples (full, working projects), although I did find one pretty nice github repo [here](https://github.com/rolandkrueger/vaadin-by-example)
 
-In summary - documentation is somewhat spotty. Possibly suitable for experienced java devs, but definitely unfriendly toward beginners to Swing and web dev on JVM in general.
+In summary - documentation is somewhat spotty and outdated. 
+Possibly suitable for experienced java devs, but definitely unfriendly toward beginners to Swing and web dev on JVM in general.
+I'm sure I would be having less issues if I took the time to read through the entire Vaadin book, but if I am going to be that thorough with all the frameworks this project would just take too long.
 
 
 ### Jhipster (Spring + Angular)
+
+
 
 ### Grails
 
