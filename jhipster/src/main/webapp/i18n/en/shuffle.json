@@ -1,0 +1,10 @@
+{
+    "shuffle": {
+        "initials": "Initials",
+        "name": "Name",
+        "submit": "Submit",
+        "addmember": "Add new member",
+        "memberslist": "Current members",
+        "cyclebtn": "Cycle"
+    }
+}

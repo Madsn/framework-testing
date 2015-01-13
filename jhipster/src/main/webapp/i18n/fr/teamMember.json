@@ -1,0 +1,20 @@
+{
+    "scrumshuffleApp": {
+        "teamMember" : {
+            "home": {
+                "title": "TeamMembers",
+                "createLabel": "Créer un nouveau TeamMember",
+                "createOrEditLabel": "Créer ou éditer un TeamMember"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TeamMember {{ id }} ?"
+            },
+            "detail": {
+                "title": "TeamMember"
+            },
+            "initials": "Initials",
+            "name": "Name"
+        }
+    }
+}
+
