@@ -57,6 +57,7 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [Vaadin](https://vaadin.com/home)
   - Progress: Finished first 3 steps, i.e. create new member + list existing members
 - [ ] [Jhipster (Spring + Angular)](https://jhipster.github.io/)
+  - Progress: Finished steps 1-4 in next to no time at all, thanks to the yeoman generator. 5 is also complete and 6+7 almost there.
 - [ ] [Grails](https://grails.org/)
 - [ ] [Play!2 (Java)](https://www.playframework.com/)
 - [ ] [Play!2 (Scala)](https://www.playframework.com/)
@@ -109,6 +110,8 @@ I'm sure I would be having less issues if I took the time to read through the en
 - Installation: 
   - Setup was very easy with yeoman - with one minor exception: the installation guide forgets to mention that ruby is required for SASS.
   - The sample app is pretty nice, with authentication, i18n, swagger API + some other stuff
+- Generator
+  - The entity generator pretty much solved steps 2-4 for me with code generation
 
 ### Grails
 
