@@ -113,14 +113,14 @@ Doesn't seem to have autoreloading setup out of the box.
 - Installation: 
   - Setup was very easy with yeoman - with one minor exception: the installation guide forgets to mention that ruby is required for SASS.
   - The sample app is pretty nice, with authentication, i18n, swagger API + some other stuff
-- Generator
-  - The entity generator pretty much solved steps 2-4 for me with code generation
+- Scaffolding for entity CRUD (both Spring AND Angular code)
 
 Autoreloading of backend code doesn't seem to work out of the box - at least not for Java 8, but autoreload of angular is setup just fine with grunt.
 
 ### Grails
 
-Excellent autoreloading for changes on views out of the box.
+- Excellent autoreloading for changes on both front and backend out of the box with run-app.
+- Decent scaffolding
 
 
 ### Play
