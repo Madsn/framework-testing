@@ -119,10 +119,11 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 
 ### Grails
 
-- Excellent autoreloading for changes on front end, backend is fine with small changes but seems to need a restart pretty often.
+- Excellent autoreloading for changes on front end, backend is fine with small changes but seems to need a restart pretty often - the uncertainty of when this is needed being the biggest downside
 - Decent scaffolding
 - Seems like I am defaulting to performing a bunch of queries to fetch all the data needed to reload a page when I'm only interested in changing one element, where with a front-end framework like angular the default would be to use ajax
-
+- IDE support for groovy is not excellent in GGTS
+- Seems very flexible, but my approach so far feels hackish - likely since I, as per usual in this experiment, only skimmed parts of the documentation
 
 ### Play
 
