@@ -64,7 +64,6 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
 - [ ] [Jersey + ??](https://jersey.java.net/)
-
 - [ ] Play/Grails + Angular/Ember?
 
 
@@ -106,6 +105,8 @@ In summary - documentation is somewhat spotty and outdated.
 Possibly suitable for experienced java devs, but definitely unfriendly toward beginners to Swing and web dev on JVM in general.
 I'm sure I would be having less issues if I took the time to read through the entire Vaadin book, but if I am going to be that thorough with all the frameworks this project would just take too long.
 
+Doesn't seem to have autoreloading setup out of the box.
+
 
 ### Jhipster (Spring + Angular)
 
@@ -115,7 +116,12 @@ I'm sure I would be having less issues if I took the time to read through the en
 - Generator
   - The entity generator pretty much solved steps 2-4 for me with code generation
 
+Autoreloading of backend code doesn't seem to work out of the box - at least not for Java 8, but autoreload of angular is setup just fine with grunt.
+
 ### Grails
+
+Excellent autoreloading for changes on views out of the box.
+
 
 ### Play
 
