@@ -59,11 +59,13 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [Jhipster (Spring + Angular)](https://jhipster.github.io/)
   - Progress: Finished steps 1-4 in next to no time at all, thanks to the yeoman generator. 5 is also complete and 6+7 almost there.
 - [ ] [Grails](https://grails.org/)
-- [ ] [Play!2 (Java)](https://www.playframework.com/)
-- [ ] [Play!2 (Scala)](https://www.playframework.com/)
+- [ ] [Play (Java)](https://www.playframework.com/)
+- [ ] [Play (Scala)](https://www.playframework.com/)
 - [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
 - [ ] [Jersey + ??](https://jersey.java.net/)
+
+- [ ] Play/Grails + Angular/Ember?
 
 
 ## Journal
@@ -115,7 +117,7 @@ I'm sure I would be having less issues if I took the time to read through the en
 
 ### Grails
 
-### Play! 2.0
+### Play
 
 #### Java
 
