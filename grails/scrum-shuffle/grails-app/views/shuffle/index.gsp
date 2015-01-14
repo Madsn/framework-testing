@@ -9,7 +9,7 @@
 	<body>
 		<div>
 			<h1>Cycle</h1>
-			${nextMember.initials} - ${nextMember.name}
+			${nextMember?.initials} - ${nextMember?.name}
 			<g:form controller="shuffle">
 				<g:actionSubmit value="Cycle" action="cycle"/>
 				<g:actionSubmit value="Skip" action="skip"/>
@@ -17,8 +17,10 @@
 		</div>
 		<div>
 			<h1>Random</h1>
+			${randomMember?.initials} - ${randomMember?.name}
 			<g:form controller="shuffle">
 				<g:actionSubmit value="Random" action="random"/>
+				<input type="hidden" name="currentRandomId" value="${randomMember?.id}" />
 			</g:form>
 		</div>
 		<div>

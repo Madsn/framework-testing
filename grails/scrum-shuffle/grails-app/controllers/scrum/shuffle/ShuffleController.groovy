@@ -7,11 +7,14 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class ShuffleController {
+	
+	def teamMemberService
 
     static allowedMethods = [cycle: "POST", skip: "POST"]
 
     def index() {
-		respond TeamMember.list(), model:[teamMemberInstanceCount: TeamMember.count(), nextMember: next()]
+		def nextMember = teamMemberService.random()
+		respond TeamMember.list(), model:[teamMemberInstanceCount: TeamMember.count(), randomMember: nextMember]
     }
 	
 	def cycle(){
@@ -25,12 +28,13 @@ class ShuffleController {
 	}
 	
 	def random(){
-		print("Random...")
-		redirect(action: "index")
+		TeamMember currentRandom = null
+		if (params.currentRandomId.isLong()){
+			currentRandom = TeamMember.get(params.currentRandomId.toLong())
+		}
+		def nextMember = teamMemberService.random(currentRandom)
+		def instanceCount = TeamMember.count()
+		render(view: "index", model:[teamMemberInstanceCount: instanceCount, randomMember: nextMember, teamMemberInstanceList: TeamMember.list()])
 	}
 	
-	private TeamMember next(){
-		// TODO
-		return TeamMember.list().get(0)
-	}
 }

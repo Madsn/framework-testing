@@ -119,8 +119,9 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 
 ### Grails
 
-- Excellent autoreloading for changes on both front and backend out of the box with run-app.
+- Excellent autoreloading for changes on front end, backend is fine with small changes but seems to need a restart pretty often.
 - Decent scaffolding
+- Seems like I am defaulting to performing a bunch of queries to fetch all the data needed to reload a page when I'm only interested in changing one element, where with a front-end framework like angular the default would be to use ajax
 
 
 ### Play

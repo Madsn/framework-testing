@@ -22,6 +22,12 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list teamMember">
+				<li class="fieldcontain">
+					<span id="id-label" class="property-label"><g:message code="teamMember.id.label" default="ID" /></span>
+					
+						<span class="property-value" aria-labelledby="id-label"><g:fieldValue bean="${teamMemberInstance}" field="id"/></span>
+					
+				</li>
 			
 				<g:if test="${teamMemberInstance?.initials}">
 				<li class="fieldcontain">
