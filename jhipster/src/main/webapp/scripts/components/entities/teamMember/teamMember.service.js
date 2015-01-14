@@ -11,6 +11,8 @@ angular.module('scrumshuffleApp')
                     return data;
                 }
             },
-            'next': { method: 'GET', url: 'api/teamMembers/cycle' }
+            'next': { method: 'POST', url: 'api/teamMembers/cycle/next' },
+            'peek': { method: 'GET', url: 'api/teamMembers/cycle' },
+            'skip': { method: 'POST', url: 'api/teamMembers/cycle/skip' }
         });
     });
