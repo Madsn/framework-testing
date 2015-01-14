@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class ShuffleController {
 	
-	def teamMemberService
+	TeamMemberService teamMemberService
 
     static allowedMethods = [cycle: "POST", skip: "POST"]
 
@@ -17,14 +17,14 @@ class ShuffleController {
 		respond TeamMember.list(), model:[teamMemberInstanceCount: TeamMember.count(), randomMember: nextMember]
     }
 	
-	def cycle(){
-		print("Cycling....")
-		redirect(action: "index")
+	def cycleNext(){
+		def nextMember = teamMemberService.cycleNext()
+		render(view: "index", model:[nextMember: nextMember, teamMemberInstanceCount: TeamMember.count(), teamMemberInstanceList: TeamMember.list()])
 	}
 	
 	def skip(){
-		print("Skipping...")
-		redirect(action: "index")
+		def nextMember = teamMemberService.skip()
+		render(view: "index", model:[nextMember: nextMember, teamMemberInstanceCount: TeamMember.count(), teamMemberInstanceList: TeamMember.list()])
 	}
 	
 	def random(){
@@ -33,8 +33,7 @@ class ShuffleController {
 			currentRandom = TeamMember.get(params.currentRandomId.toLong())
 		}
 		def nextMember = teamMemberService.random(currentRandom)
-		def instanceCount = TeamMember.count()
-		render(view: "index", model:[teamMemberInstanceCount: instanceCount, randomMember: nextMember, teamMemberInstanceList: TeamMember.list()])
+		render(view: "index", model:[teamMemberInstanceCount: TeamMember.count(), randomMember: nextMember, teamMemberInstanceList: TeamMember.list()])
 	}
 	
 }

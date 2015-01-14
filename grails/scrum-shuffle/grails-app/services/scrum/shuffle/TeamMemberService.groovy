@@ -20,18 +20,32 @@ class TeamMemberService {
 	}
 	
 	public TeamMember cycleNext(){
-		print("This is cyclenext")
-		def member = TeamMember.find(sort: "lastTurn", order:"asc", max:1)
-		if (member.count > 0){
+		def m = getNext()
+		if (m == null) return getNext()
+		def now = new LocalDateTime().now()
+		m.setLastTurn(now)
+		m.save(flush: true, failOnError: true)
+		return getNext()
+	}
+	
+	private TeamMember getNext(){
+		def skipBuffer = new LocalDateTime().now().minusSeconds(60)
+		def query = TeamMember.where{
+			lastSkipped < skipBuffer
+		}
+		def member = query.list(sort: "lastTurn", order: "ASC", max: 50) 
+		print member.size()
+		if (member.size() > 0){
 			return member.get(0)
 		}
-		return new TeamMember()
+		return null
 	}
 	
 	public TeamMember skip(){
-		TeamMember nextMember = cycleNext()
+		TeamMember nextMember = getNext()
+		if (m == null) return getNext()
 		nextMember.setLastSkipped(new LocalDateTime().now())
-		nextMember.save()
-		return cycleNext()
+		nextMember.save(flush: true, failOnError: true)
+		return getNext()
 	}
 }

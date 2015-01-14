@@ -10,15 +10,15 @@
 		<div>
 			<h1>Cycle</h1>
 			${nextMember?.initials} - ${nextMember?.name}
-			<g:form controller="shuffle">
-				<g:actionSubmit value="Cycle" action="cycle"/>
+			<g:form controller="shuffle" method="POST">
+				<g:actionSubmit value="Cycle" action="cycleNext"/>
 				<g:actionSubmit value="Skip" action="skip"/>
 			</g:form>
 		</div>
 		<div>
 			<h1>Random</h1>
 			${randomMember?.initials} - ${randomMember?.name}
-			<g:form controller="shuffle">
+			<g:form controller="shuffle" method="POST">
 				<g:actionSubmit value="Random" action="random"/>
 				<input type="hidden" name="currentRandomId" value="${randomMember?.id}" />
 			</g:form>
@@ -43,7 +43,7 @@
 				<g:each in="${teamMemberInstanceList}" status="i" var="teamMemberInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${teamMemberInstance.id}">${fieldValue(bean: teamMemberInstance, field: "initials")}</g:link></td>
+						<td><g:link controller="teamMember" action="show" id="${teamMemberInstance.id}">${fieldValue(bean: teamMemberInstance, field: "initials")}</g:link></td>
 					
 						<td>${fieldValue(bean: teamMemberInstance, field: "lastSkipped")}</td>
 					

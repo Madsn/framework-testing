@@ -6,8 +6,16 @@ class TeamMember {
 
 	String initials;
 	String name;
-	LocalDateTime lastTurn = new LocalDateTime(1970, 1, 1, 0, 0)
-	LocalDateTime lastSkipped = new LocalDateTime(1970, 1, 1, 0, 0)
+	LocalDateTime lastTurn
+	LocalDateTime lastSkipped
+	
+	public TeamMember(String initials, String name){
+		this.initials = initials
+		this.name = name
+		def x = new LocalDateTime(2000, 1, 1, 0, 0)
+		lastTurn = x
+		lastSkipped = x
+	}
 	
     static constraints = {
     }
