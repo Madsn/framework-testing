@@ -1,0 +1,5 @@
+GET		/		controllers.Members.list()
+GET		/:id	controllers.Members.get(id: Long)
+POST	/:id	controllers.Members.update(id: Long)
+PUT		/		controllers.Members.put()
+DELETE	/:id	controllers.Members.delete(id: Long)

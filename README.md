@@ -66,18 +66,17 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [Jersey + ??](https://jersey.java.net/)
 - [ ] Play/Grails + Angular/Ember?
 
-
 ## Journal
 
-Comment on the following for each framework.
+Possible topics to comment on for each framework.
 
-- Ease of installation/setup?
+- Ease of installation/setup? This is somewhat important to me, since ideally I would like to work with a stack that I can also recommend to friends who are fairly new to programming
 - Quality of documentation?
 - Availability of learning resources?
 - Tooling? Database migrations, IDE support, etc.
 - Productivity? Amount of boilerplate, configuration, etc.
 - Templating/styling? How easy is it to work with the UI?
-- Performance? req/s benchmark, resource usage
+- Performance/scalability? req/s benchmark, resource usage, scaling options
 
 ### Vaadin
 
@@ -129,6 +128,13 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 ### Play
 
 #### Java
+
+- "Ebean DDL generation" - automatically updates the initial db migration sql script. Pretty neat for some quick initial prototyping when combined with [play2-crud](https://github.com/hakandilek/play2-crud), which generates GUI and backend for CRUD on-the-fly
+- It _should_ be straightforward to get eclipse to play nice with Play, but that's not exactly my experience. Apparently you have to manually add a folder containing compiled templates (target/scala-2.11/twirl) to the project build path - and even then eclipse is having trouble understanding what is being referenced (but it runs fine).
+- Setting up routes and endpoints is simple
+- Working with entities is straightforward and familiar (JPA)
+- Templating language uses Scala syntax - a nice way for somebody comfortable with Java to slowly get used to Scala, but not great for beginners.
+- Autoreloading of changes seems decent.
 
 #### Scala
 
