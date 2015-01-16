@@ -18,8 +18,6 @@ create table member (
   key                       bigint not null,
   name                      varchar(255),
   initials                  varchar(255),
-  last_turn                 timestamp,
-  last_skipped              timestamp,
   constraint pk_member primary key (key))
 ;
 

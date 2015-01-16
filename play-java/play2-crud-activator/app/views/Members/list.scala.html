@@ -13,7 +13,10 @@
 				<h3>Team members</h3>
 				<ul class="list-group">
 					@for(member <- members) {
-					<a href=""><li class="list-group-item">@member.toString()</li></a> }
+					<a href="@routes.Members.edit({member.getKey()})">
+						<li class="list-group-item">@member.toString()</li>
+					</a> 
+					}
 				</ul>
 			</div>
 			<div class="col-md-4">

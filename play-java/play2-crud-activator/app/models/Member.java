@@ -1,13 +1,8 @@
 package models;
 
-import java.util.List;
-
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import org.joda.time.DateTime;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
@@ -27,28 +22,6 @@ public class Member extends Model implements BasicModel<Long> {
 	@Basic
 	@Required
 	private String initials;
-
-	@DateTimeFormat
-	private DateTime lastTurn;
-
-	@DateTimeFormat
-	private DateTime lastSkipped;
-
-	public DateTime getLastSkipped() {
-		return lastSkipped;
-	}
-
-	public void setLastSkipped(DateTime lastSkipped) {
-		this.lastSkipped = lastSkipped;
-	}
-
-	public DateTime getLastTurn() {
-		return lastTurn;
-	}
-
-	public void setLastTurn(DateTime lastTurn) {
-		this.lastTurn = lastTurn;
-	}
 
 	public String getInitials() {
 		return initials;
@@ -76,8 +49,12 @@ public class Member extends Model implements BasicModel<Long> {
 
 	@Override
 	public String toString() {
-		return "Member [key=" + key + ", name=" + name + "]";
+		return key + " - " + initials + " - " + name;
 	}
 
 	public static Finder<Long, Member> find = new Finder<Long, Member>(Long.class, Member.class);
+
+	public static void create(Member member) {
+		member.save();
+	}
 }

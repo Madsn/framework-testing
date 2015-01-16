@@ -1,3 +1,4 @@
+@(memberForm: Form[Member], member: Member)
 <!DOCTYPE html>
 
 <html>
@@ -5,9 +6,11 @@
         <title>play2-crud</title>
     </head>
     <body>
-	    <ul>
-		  <li><a href="/app">CRUD index</a></li>
-		  <li><a href="/members">members index</a></li>
-		</ul>
-    </body>
+    	@helper.form(action = routes.Members.update()) {
+    		<input type="hidden" name="key" value="@member.getKey()"></label><br/>
+			<input type="text" name="name" value="@member.getName()"/><br/>
+			<input type="text" name="initials" value="@member.getInitials()" /><br/>
+			<button type="submit" name="save" id="save" class="btn btn-primary">Save</button>
+		}
+</body>
 </html>
