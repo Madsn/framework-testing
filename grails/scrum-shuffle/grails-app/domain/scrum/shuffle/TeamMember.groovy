@@ -4,8 +4,8 @@ import org.joda.time.LocalDateTime
 
 class TeamMember {
 
-	String initials;
-	String name;
+	String initials
+	String name
 	LocalDateTime lastTurn
 	LocalDateTime lastSkipped
 	

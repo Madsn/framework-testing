@@ -1,0 +1,22 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        @includes.header()
+    </head>
+    <body>
+        @partials.navbar()
+
+        <div id="content" class="container">
+
+            @content
+
+            @partials.footer()
+
+        </div>
+        @includes.body()
+    </body>
+</html>
