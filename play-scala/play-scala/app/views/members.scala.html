@@ -1,9 +1,37 @@
 @(members: List[Member])
 
 @layout("Members page"){
-    <h1>Members</h1>
-    @for(m <- members){
-        @m.name - @m.initials
-    }
+    <div class="row">
+        <div class="col-md-3 col-md-offset-8">
+            <h1>Members</h1>
+            <ul>
+            @for(m <- members){
+                <li>@m.name - @m.initials</li>
+            }
+            </ul>
+            <form class="form-horizontal" action="@routes.Application.memberAdd()" method="POST">
+                <fieldset>
+                    <legend>Add new member</legend>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input name="name" type="text" placeholder="Name" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input name="initials" type="text" placeholder="Initials" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-sm-offset-6">
+                            <input type="submit" class="btn btn-primary" value="Add member"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-md-8">
+        </div>
+    </div>
 }
 

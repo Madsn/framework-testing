@@ -16,7 +16,7 @@ import play.api.libs.json.Json._
 
 object Application extends Controller {
 
-  val Members = TableQuery[MembersTable]
+  val members = TableQuery[MembersTable]
 
   val memberForm = Form(
     mapping(
@@ -29,14 +29,14 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
-  def members = DBAction { implicit rs =>
-    Ok(views.html.members(Members.list))
+  def listMembers = DBAction { implicit rs =>
+    Ok(views.html.members(members.list))
   }
 
   def memberAdd = DBAction { implicit rs =>
-    val member = new Member("Mikkel", "MIKMA")
-    Members.insert(member)
-    Redirect(routes.Application.members)
+    val member = memberForm.bindFromRequest.get
+    members.insert(member)
+    Redirect(routes.Application.listMembers)
   }
 
   def memberModify(id: Long) = Action {

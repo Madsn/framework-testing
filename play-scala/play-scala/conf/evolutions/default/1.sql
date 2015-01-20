@@ -3,7 +3,7 @@
 
 # --- !Ups
 
-create table "MEMBER" ("name" VARCHAR NOT NULL PRIMARY KEY,"initials" VARCHAR NOT NULL);
+create table "MEMBER" ("name" VARCHAR NOT NULL,"initials" VARCHAR NOT NULL PRIMARY KEY);
 
 # --- !Downs
 

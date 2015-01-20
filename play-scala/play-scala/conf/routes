@@ -5,7 +5,8 @@
 # Home page
 GET         /                          controllers.Application.index
 
-GET         /members                   controllers.Application.members
+GET         /members                   controllers.Application.listMembers
+POST        /members/add                controllers.Application.memberAdd
 POST        /members/:id               controllers.Application.memberModify(id: Long)
 POST        /members/:id/delete        controllers.Application.memberDelete(id: Long)
 
