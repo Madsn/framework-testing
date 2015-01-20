@@ -1,0 +1,9 @@
+@(members: List[Member])
+
+@layout("Members page"){
+    <h1>Members</h1>
+    @for(m <- members){
+        @m.name - @m.initials
+    }
+}
+

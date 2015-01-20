@@ -1,28 +1,16 @@
 package models
 
-import play.api.db.slick.Profile
-
-import scala.slick.ast.{Symbol, Node}
-import scala.slick.lifted
+import play.api.db.slick.Config.driver.simple._
 
 case class Member(name: String, initials: String)
 
-trait MemberComponent {
-  this: Profile =>
-  //<- step 1: you must add this "self-type"
+class MembersTable(tag: Tag) extends Table[Member](tag, "MEMBER") {
 
-  import profile.simple._
+  def name = column[String]("name", O.PrimaryKey)
 
-  //<- step 2: then import the correct Table, ... from the profile
+  def initials = column[String]("initials", O.NotNull)
 
-  class MembersTable(tag: Tag) extends Table[Member](tag, "MEMBER") {
-
-    def name = column[String]("name", O.PrimaryKey)
-
-    def initials = column[String]("initials", O.NotNull)
-
-    def * = (name, initials) <>(Member.tupled, Member.unapply _)
-
-  }
+  def * = (name, initials) <>(Member.tupled, Member.unapply _)
 
 }
+
