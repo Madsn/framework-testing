@@ -63,6 +63,7 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
 - [ ] [Jersey + ??](https://jersey.java.net/)
+- [ ] [Ruby on Rails](https://rubyonrails.org/)
 - [ ] Play/Grails + Angular/Ember?
 
 ## Journal
@@ -146,3 +147,8 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 ### Dropwizard
 
 ### Jersey + ??
+
+### Ruby on Rails
+
+Installed on windows with RailsInstaller. 
+Ran into issues almost instantly when trying to create a new project ((issue+fix)[https://gist.github.com/luislavena/f064211759ee0f806c88]).
