@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Battle of the JVM frameworks](#battle-of-the-jvm-frameworks)
+- [Battle of the web frameworks](#battle-of-the-web-frameworks)
   - [The application](#the-application)
     - [Features:](#features)
     - [Implementation order](#implementation-order)
@@ -13,7 +13,7 @@
       - [Thoughts](#thoughts)
     - [Jhipster (Spring + Angular)](#jhipster-spring--angular)
     - [Grails](#grails)
-    - [Play! 2.0](#play!-20)
+    - [Play](#play)
       - [Java](#java)
       - [Scala](#scala)
     - [ZK](#zk)
@@ -22,11 +22,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Battle of the JVM frameworks
+# Battle of the web frameworks
 
-I've singled out a few web development stacks that I want to test out.
-
-My primary requirement for now is that it should run on the JVM, but I may decide later on to expand and include frameworks like RoR, Django, Node.js, ASP.NET, Clojure/Luminus and possibly others.
+I've singled out 'a few' web development stacks that I want to test out.
 
 ## The application
 
@@ -61,6 +59,7 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [Grails](https://grails.org/)
 - [ ] [Play (Java)](https://www.playframework.com/)
 - [ ] [Play (Scala)](https://www.playframework.com/)
+  - Progress: Finished steps 1-3
 - [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
 - [ ] [Jersey + ??](https://jersey.java.net/)
@@ -137,6 +136,10 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 - Autoreloading of changes seems decent.
 
 #### Scala
+
+- IDE support is not great, I'm constantly seeing intellij complain about unused imports and missing imports, when the app is running just fine
+- Different versions of different libraries require different versions of the Scala compiler = dependency hell
+- I'm not particularly pleased with the documentation/tutorials, and samples seem to only work if I use the EXACT same setup wrt. libraries and their versions.
 
 ### ZK
 
