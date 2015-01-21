@@ -18,7 +18,8 @@
       - [Scala](#scala)
     - [ZK](#zk)
     - [Dropwizard](#dropwizard)
-    - [Jersey + ??](#jersey--)
+    - [Ruby on Rails](#ruby-on-rails)
+    - [Wicket](#wicket)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -62,9 +63,8 @@ To the extent that it makes sense, I will attempt to implement the functionality
   - Progress: Finished steps 1-3
 - [ ] [ZK](http://www.zkoss.org/)
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
-- [ ] [Jersey + ??](https://jersey.java.net/)
 - [ ] [Ruby on Rails](https://rubyonrails.org/)
-- [ ] Play/Grails + Angular/Ember?
+- [ ] [Wicket](https://wicket.apache.org/)
 
 ## Journal
 
@@ -146,9 +146,9 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 
 ### Dropwizard
 
-### Jersey + ??
-
 ### Ruby on Rails
 
 Installed on windows with RailsInstaller. 
-Ran into issues almost instantly when trying to create a new project ((issue+fix)[https://gist.github.com/luislavena/f064211759ee0f806c88]).
+Ran into issues almost instantly when trying to create a new project, windows just doesn't play nice with ruby ((issue+fix)[https://gist.github.com/luislavena/f064211759ee0f806c88]).
+
+### Wicket
