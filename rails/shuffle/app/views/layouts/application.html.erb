@@ -2,13 +2,16 @@
 <html>
 <head>
   <title>Shuffle</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= render 'layouts/includes/header' %>
 </head>
 <body>
 
-<%= yield %>
+<%= render 'layouts/includes/navbar' %>
 
+<div class="container">
+  <%= yield %>
+</div>
+
+<%= render 'layouts/includes/footer' %>
 </body>
 </html>
