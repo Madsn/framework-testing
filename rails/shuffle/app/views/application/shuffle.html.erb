@@ -1,14 +1,14 @@
 <div class="row">
   <div class="col-sm-6">
 
-    <%= button_to "Shuffle", "shuffle/cycle", :class => "btn btn-primary", :method => 'post' %>
-    <%= @nextMember.initials + " " + @nextMember.name %>
+    <%= button_to "Shuffle", shuffle_cycle_path, :class => "btn btn-primary", :method => 'post' %>
+    <%= @next_member.initials + " " + @next_member.name %>
 
   </div>
   <div class="col-sm-6">
 
-    <%= button_to "Random", "shuffle/random", :class => "btn btn-primary", :method => 'get' %>
-    <%= @randomMember.initials + " " + @randomMember.name %>
+    <%= button_to "Random", shuffle_random_path, :class => "btn btn-primary", :method => 'get' %>
+    <%= @random_member.initials + " " + @random_member.name %>
 
   </div>
 </div>

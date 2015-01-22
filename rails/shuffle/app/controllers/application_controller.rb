@@ -5,33 +5,48 @@ class ApplicationController < ActionController::Base
   layout 'application'
 
   def index
-    @nextMember = peek
-    @randomMember = getRandom
-    render 'shuffle'
+
+    if params[:next_member] == nil
+      @next_member = peek
+    else
+      @next_member = params[:next_member]
+    end
+    if params[:random_member] == nil
+      @random_member = get_random
+    else
+      @random_member = params[:random_member]
+    end
+
+    render :shuffle
   end
 
   def cycle
-    @nextMember = takeTurn
-    redirect_to root_path
+    @next_member = take_turn
+    @random_member = get_random
+    render :shuffle
   end
 
   def random
-    @nextMember = getRandom
-    redirect_to root_path
+    @next_member = peek
+    @random_member = get_random
+    render :shuffle
   end
 
   private
     def peek
+      puts "Peek called"
       # TODO
       return Member.all[0]
     end
 
-    def takeTurn
+    def take_turn
+      puts "Take turn called"
       # TODO
       return Member.all[0]
     end
 
-    def getRandom
+    def get_random
+      puts "Get random called"
       # TODO
       return Member.all[0]
     end
