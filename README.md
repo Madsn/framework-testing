@@ -20,6 +20,9 @@
     - [Dropwizard](#dropwizard)
     - [Ruby on Rails](#ruby-on-rails)
     - [Wicket](#wicket)
+    - [Python](#python)
+      - [Django](#django)
+      - [Flask](#flask)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -149,6 +152,15 @@ Autoreloading of backend code doesn't seem to work out of the box - at least not
 ### Ruby on Rails
 
 Installed on windows with RailsInstaller. 
-Ran into issues almost instantly when trying to create a new project, windows just doesn't play nice with ruby ((issue+fix)[https://gist.github.com/luislavena/f064211759ee0f806c88]).
+Ran into issues almost instantly when trying to create a new project, windows just doesn't play nice with ruby [(issue+fix)](https://gist.github.com/luislavena/f064211759ee0f806c88).
+
+It's not the first time I play with Rails - and my general impression is somewhat unchanged: Convention over configuration is a nice concept, except with all the "magic" going on behind the scenes, it's hard to explain why things work (or why they don't) without having read the docs very thoroughly.
 
 ### Wicket
+
+
+### Python
+
+#### Django
+
+#### Flask
