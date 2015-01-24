@@ -7,3 +7,4 @@ dropwizard/.settings/
 play-scala/play-slick-quickstart/
 rails/shuffle/.idea/
 rails/shuffle/vendor/assets/bower/
+node_modules/
