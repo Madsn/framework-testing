@@ -56,6 +56,8 @@ To the extent that it makes sense, I will attempt to implement the functionality
 
 ## The competition
 
+I won't be able to get around all of them, but I have at least a little interest in checking out each of these:
+
 - [ ] [Vaadin](https://vaadin.com/home)
   - Progress: Finished first 3 steps, i.e. create new member + list existing members
 - [ ] [Jhipster (Spring + Angular)](https://jhipster.github.io/)

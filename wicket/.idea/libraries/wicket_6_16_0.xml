@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="wicket-6.16.0" type="wicket">
+    <properties version="6.16.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/wicket-cdi-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-ioc-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-request-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-devutils-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-velocity-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-guice-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-spring-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-auth-roles-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-jmx-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-util-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-datetime-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-extensions-6.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wicket-core-6.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,33 @@
+{
+	"baseName": "shuffle",
+	"packageName": "net.madsn.frameworktesting",
+	"entities": [],
+	"resources": [
+		{
+			"name": "Member",
+			"methods": [
+				{
+					"methodName": "list",
+					"methodType": "GET",
+					"methodPath": "/members",
+					"formParams": []
+				},
+				{
+					"methodName": "show",
+					"methodType": "GET",
+					"methodPath": "/members/{memberId}",
+					"formParams": []
+				},
+				{
+					"methodName": "create",
+					"methodType": "POST",
+					"methodPath": "/members/new",
+					"formParams": [
+						"name",
+						"initials"
+					]
+				}
+			]
+		}
+	]
+}
