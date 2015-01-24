@@ -68,6 +68,10 @@ To the extent that it makes sense, I will attempt to implement the functionality
 - [ ] [Dropwizard](https://dropwizard.github.io/dropwizard/)
 - [ ] [Ruby on Rails](https://rubyonrails.org/)
 - [ ] [Wicket](https://wicket.apache.org/)
+- [ ] [Django](https://www.djangoproject.com/)
+- [ ] [Flask](http://flask.pocoo.org/)
+- [ ] [Pyramid](http://www.pylonsproject.org/)
+- [ ] [Zotonic](http://zotonic.com/)
 
 ## Journal
 
