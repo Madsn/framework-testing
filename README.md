@@ -179,7 +179,7 @@ It's not the first time I play with Rails - and my general impression is somewha
 I combined two different yeoman generators for this. 
 [generator-loopback](https://github.com/strongloop/generator-loopback) for the overall project structure, and [generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular) for the client directory. 
 The gulp-angular generator is really nice, and offers a lot of options. 
-I chose to use ui-router for routing, [Material Design](https://material.angularjs.org/#/) for styling/layout, SASS as my CSS preprocessor and Typescript for my "Javascript flavor".
+I chose to use ui-router for routing, bootstrap for styling/layout, SASS as the CSS preprocessor and Typescript as the "Javascript flavor".
 
 Loopback is an interesting nodejs framework for VERY easy creation of a RESTful backend - almost no coding, just configuration via json files.
 

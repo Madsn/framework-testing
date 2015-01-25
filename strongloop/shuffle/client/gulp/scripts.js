@@ -8,8 +8,6 @@ var $ = require('gulp-load-plugins')();
 
 gulp.task('scripts', function () {
   return gulp.src(paths.src + '/{app,components}/**/*.ts')
-    .pipe($.tslint())
-    .pipe($.tslint.report('prose', { emitError: false }))
     .pipe($.typescript())
     .on('error', function handleError(err) {
       console.error(err.toString());
