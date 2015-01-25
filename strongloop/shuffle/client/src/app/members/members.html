@@ -1,0 +1,26 @@
+<div layout="vertical" layout-fill>
+
+  <header ng-include="'components/layout/navbar.html'"></header>
+
+  <md-content ng-controller="MembersCtrl">
+    <section class="jumbotron">
+      <p>
+        <button>Random</button>
+        <button>Cycle</button>
+      </p>
+    </section>
+
+    <div class="techs" layout-align="center">
+      <md-card ng-repeat="member in members" ng-click="select(member)">
+        <div class="caption">
+          <md-button ng-class="{'md-primary': member.initials == selected}">{{member.initials}}</md-button>
+
+          <h3>{{member.name}}</h3>
+        </div>
+      </md-card>
+    </div>
+  </md-content>
+
+  <footer ng-include="'components/layout/footer.html'"></footer>
+
+</div>

@@ -1,10 +1,8 @@
-vaadin/.settings/
-vaadin/.classpath
-vaadin/.project
+.settings/
+.classpath
+.project
 grails/scrum-shuffle/target/
-grails/scrum-shuffle/.classpath
-dropwizard/.settings/
 play-scala/play-slick-quickstart/
-rails/shuffle/.idea/
 rails/shuffle/vendor/assets/bower/
 node_modules/
+.idea/

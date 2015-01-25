@@ -2,13 +2,13 @@
 
 module client {
 
-  interface INavbarScope extends ng.IScope {
+  interface ILayoutScope extends ng.IScope {
     date: Date
   }
 
-  export class NavbarCtrl {
+  export class LayoutCtrl {
     /* @ngInject */
-    constructor ($scope: INavbarScope) {
+    constructor ($scope: ILayoutScope) {
       $scope.date = new Date();
     }
   }
