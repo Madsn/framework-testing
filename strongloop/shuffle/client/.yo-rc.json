@@ -76,7 +76,11 @@
         "version": null,
         "key": null,
         "module": null
-      }
+      },
+      "advancedFeatures": [
+        "modernizr",
+        "imagemin"
+      ]
     }
   }
 }

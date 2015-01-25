@@ -6,3 +6,4 @@ play-scala/play-slick-quickstart/
 rails/shuffle/vendor/assets/bower/
 node_modules/
 .idea/
+strongloop/client/

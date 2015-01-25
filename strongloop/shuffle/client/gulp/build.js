@@ -65,6 +65,11 @@ gulp.task('html', ['inject', 'partials'], function () {
 
 gulp.task('images', function () {
   return gulp.src(paths.src + '/assets/images/**/*')
+    .pipe($.imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    }))
     .pipe(gulp.dest(paths.dist + '/assets/images/'));
 });
 
