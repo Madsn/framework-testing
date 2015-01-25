@@ -173,14 +173,24 @@ It's not the first time I play with Rails - and my general impression is somewha
 #### Flask
 
 
-### Node.js (Loopback, Angular, Typescript)
+### SPA stacks
 
+#### Loopback, Angular, Typescript
 
+##### Yeoman
 I combined two different yeoman generators for this. 
 [generator-loopback](https://github.com/strongloop/generator-loopback) for the overall project structure, and [generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular) for the client directory. 
 The gulp-angular generator is really nice, and offers a lot of options. 
 I chose to use ui-router for routing, bootstrap for styling/layout, SASS as the CSS preprocessor and Typescript as the "Javascript flavor".
+I initially experimented with Material Design for angular, but it seems to have a lot of sharp edges - or is at least not nearly as well integrated in the gulp-angular generator as bootstrap is.
 
+##### Loopback
 Loopback is an interesting nodejs framework for VERY easy creation of a RESTful backend - almost no coding, just configuration via json files.
+_TODO: describe loopback angular sdk_
 
+##### Angular
 A general nice thing about angular, is the ability to quickly prototype a feature with no backend - by just storing data in the controller. Then once the workflow seems to be in place, it's just a matter of hooking the controller up to the backend.
+
+##### Typescript
+Using typescript does add more of a learning curve than I had expected, not with typescript in particular, but writing it such that the compiled javascript satisfies the expections angularjs has for the code. 
+Typescript is probably a poor choice for prototyping small projects.
