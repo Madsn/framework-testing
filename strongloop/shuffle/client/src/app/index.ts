@@ -7,6 +7,7 @@ module client {
     .controller('MainCtrl', MainCtrl)
     .controller('MembersCtrl', MembersCtrl)
     .controller('LayoutCtrl', LayoutCtrl)
+    .directive('sampleDirective', SampleDirective.Factory())
 
     .config(function ($stateProvider, $urlRouterProvider) {
       $stateProvider
