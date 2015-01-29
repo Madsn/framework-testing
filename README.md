@@ -194,3 +194,9 @@ A general nice thing about angular, is the ability to quickly prototype a featur
 ##### Typescript
 Using typescript does add more of a learning curve than I had expected, not with typescript in particular, but writing it such that the compiled javascript satisfies the expections angularjs has for the code. 
 Typescript is probably a poor choice for prototyping small projects.
+
+
+#### Flux + React.js
+
+- https://github.com/spoike/refluxjs or https://github.com/BinaryMuse/fluxxor
+- Possibly with: https://github.com/wix/react-templates
