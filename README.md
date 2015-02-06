@@ -200,3 +200,13 @@ Typescript is probably a poor choice for prototyping small projects.
 
 - https://github.com/spoike/refluxjs or https://github.com/BinaryMuse/fluxxor
 - Possibly with: https://github.com/wix/react-templates
+
+
+#### Clojure SPA
+
+##### Reagent
+
+Based on [reagent-template](https://github.com/reagent-project/reagent-template).
+
+- Back-end: ring
+- Front-end: reagent
