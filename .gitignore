@@ -11,3 +11,4 @@ clojure/luminus-reagent/resources/public/js/out/
 clojure/luminus-reagent/luminus_reagent.iml
 clojure/luminus-reagent/resources/public/js/app.js
 clojure/luminus-reagent/site.db.mv.db
+ninjaframework/target/
