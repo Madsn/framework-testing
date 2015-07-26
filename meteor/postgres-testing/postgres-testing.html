@@ -9,6 +9,10 @@
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  <button id="addTask">Add task</button>
+  <ul>
+    {{#each tasks}}
+      <li>{{text}}</li>
+    {{/each}}
+  </ul>
 </template>
