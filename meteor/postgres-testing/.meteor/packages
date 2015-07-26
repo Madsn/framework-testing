@@ -6,3 +6,5 @@
 
 meteor-platform
 meteorsteam:meteor-postgres
+aldeed:simple-schema
+aldeed:autoform

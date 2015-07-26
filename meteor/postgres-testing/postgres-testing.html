@@ -9,10 +9,33 @@
 </body>
 
 <template name="hello">
-  <button id="addTask">Add task</button>
+  {{> addTaskForm}}
+  <button id="deleteAll">Delete All</button>
+  <style>
+    li.checked {
+      background-color: lightblue;
+    }
+  </style>
   <ul>
     {{#each tasks}}
-      <li>{{text}}</li>
+      <li class="{{getCssClass .}}">
+        {{text}}
+        <input id="{{id}}" type="checkbox" class="toggleDone" checked="{{checked}}">
+      </li>
     {{/each}}
   </ul>
+</template>
+
+<template name="addTaskForm">
+  {{#autoForm schema=addTaskFormSchema id="addTaskForm" type="method" meteormethod="addTask"}}
+  <fieldset>
+    <legend>Add task</legend>
+    {{> afQuickField name="text"}}
+    {{> afQuickField name="checked" default="false"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
 </template>
