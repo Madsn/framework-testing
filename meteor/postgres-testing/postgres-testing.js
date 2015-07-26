@@ -1,7 +1,7 @@
 tasks = new SQL.Collection('tasks');
 
 Schema = {};
-Schema.addTaskFormSchema = new SimpleSchema({
+Schema.taskFormSchema = new SimpleSchema({
   text: {
     type: String,
     label: 'Task text',
@@ -15,7 +15,10 @@ Schema.addTaskFormSchema = new SimpleSchema({
 });
 
 if (Meteor.isClient) {
-  var taskTable = {id: ['$number'], text: ['$string'], checked: ["$bool", {$default: false}]};
+  var taskTable = {
+    id: ['$number'],
+    text: ['$string'],
+    checked: ['$bool', {$default: false}]};
   tasks.createTable(taskTable);
   Template.hello.helpers({
     tasks: function() {
@@ -37,14 +40,22 @@ if (Meteor.isClient) {
     }
   });
   Template.addTaskForm.helpers({
-    addTaskFormSchema: function() {
-      return Schema.addTaskFormSchema;
+    taskFormSchema: function() {
+      return Schema.taskFormSchema;
+    }
+  });
+  Template.editTaskForm.helpers({
+    taskFormSchema: function() {
+      return Schema.taskFormSchema;
     }
   });
 }
 
 if (Meteor.isServer) {
-  var taskTable = {text: ['$string'], checked: ["$bool", {$default: false}]};
+  var taskTable = {
+    id: ['$seq', '$primary', '$notnull'],
+    text: ['$string'],
+    checked: ['$bool', {$default: false}]};
   tasks.createTable(taskTable).save();
   tasks.publish('tasks', function(){
     return tasks.select();
@@ -56,7 +67,14 @@ if (Meteor.isServer) {
 
 Meteor.methods({
   addTask: function(doc) {
-    check(doc, Schema.addTaskFormSchema);
+    check(doc, Schema.taskFormSchema);
     tasks.insert(doc).save();
+  },
+  editTask: function(doc_raw, documentId) {
+    var doc = doc_raw.$set;
+    console.log(doc_raw);
+    console.log(documentId);
+    check(doc, Schema.taskFormSchema);
+    tasks.update(doc).where('id = ?', documentId).save();
   }
 });

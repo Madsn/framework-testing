@@ -19,19 +19,33 @@
   <ul>
     {{#each tasks}}
       <li class="{{getCssClass .}}">
-        {{text}}
-        <input id="{{id}}" type="checkbox" class="toggleDone" checked="{{checked}}">
+        <input id="{{id}}" type="checkbox" checked="{{checked}}" class="toggleDone">
+        {{> editTaskForm}}
       </li>
     {{/each}}
   </ul>
 </template>
 
 <template name="addTaskForm">
-  {{#autoForm schema=addTaskFormSchema id="addTaskForm" type="method" meteormethod="addTask"}}
+  {{#autoForm schema=taskFormSchema id="addTaskForm" type="method" meteormethod="addTask"}}
   <fieldset>
     <legend>Add task</legend>
     {{> afQuickField name="text"}}
     {{> afQuickField name="checked" default="false"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
+</template>
+
+<template name="editTaskForm">
+  {{#autoForm schema=taskFormSchema id="editTaskForm" doc=this type="method-update" meteormethod="editTask"}}
+  <fieldset>
+    <legend>Add task</legend>
+    {{> afQuickField name="text" value=text}}
+    {{> afQuickField name="checked" default="false" value=checked}}
     <div>
       <button type="submit" class="btn btn-primary">Submit</button>
       <button type="reset" class="btn btn-default">Reset</button>
